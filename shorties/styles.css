@@ -1,0 +1,49 @@
+/* Основные стили */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #181818;
+    color: #fff;
+    overflow: hidden; /* Убираем прокрутку браузера */
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000;
+    padding: 10px 20px;
+    border-bottom: 3px solid #ff9900;
+    z-index: 10;
+}
+
+.main {
+    position: relative;
+    height: 100vh;
+}
+
+.shorties {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    scroll-snap-type: y mandatory; /* Прокрутка по секциям */
+    overflow-y: scroll;
+    height: 100vh;
+}
+
+.short-video {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: start; /* Фиксирование секции */
+    position: relative;
+    background-color: #000;
+}
+
+.short-video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Заполняет экран */
+}
